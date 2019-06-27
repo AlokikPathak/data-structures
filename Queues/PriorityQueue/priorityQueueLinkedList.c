@@ -2,7 +2,7 @@
 	* Priority Queue Implementation using Linked List
 	
 	* Time Complexity Analysis
-	* Enque Operation amortized time O(1)     
+	* Enque Operation amortized time O(N)     
 	* Deque Operation amortized time O(1)
 	* Peek(Getting the Highest Priority Element) amortized time O(1)
 	
@@ -31,7 +31,6 @@ typedef struct Node {
 
 /**
 * Creates a new Node
-* 
 */
 Node* newNode(int d, int p){
 	
@@ -46,7 +45,7 @@ Node* newNode(int d, int p){
 }
 
 /**
-* Peek -> returs the value at Head(Having highest Priority
+* Peek -> returs the value at Head(Having highest Priority)
 * Time Complexity: O(1)
 */
 int peek( Node** head){
@@ -73,7 +72,7 @@ void pop( Node** head){
 /**
 * Push -> Insert a new node in the queue at a position according to its priority
 * 
-* Time Complexity: O(1)
+* Time Complexity: O(N)
 */
 void push(Node** head, int d, int p){
 	
@@ -155,7 +154,7 @@ int printQueue(Node* head){
 
 int main(){
 	
-	int choice, nodeData, nodePriority; //stores no of element
+	int choice, nodeData, nodePriority; //Stores no of element
 	
 	Node* priorityQueue = newNode(4,2);  // Initialzing Priority Queue with a Node(data->4, priority->2)
 	
