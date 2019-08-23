@@ -13,6 +13,7 @@ struct Queue* createQueue(unsigned int capacity){
     struct Queue* queue = (struct Queue*) malloc(sizeof(struct Queue));
     queue->capacity = capacity;
     queue->front = 0;
+    queue->size = 0;
     queue->rear = capacity-1; //refer enqueue function
     // Create Integer array of size 'capacity'
     queue->array =(int*) malloc((queue->capacity)*sizeof(int));
@@ -55,8 +56,10 @@ void dequeue(struct Queue* queue) {
 //Function to get front item of queue
 int getFront(struct Queue* queue) {
     // Checking underflow condition
-    if(isEmpty(queue))
+    if(isEmpty(queue)) {
+        printf("\nQueue is empty\n");
         return INT_MIN;
+    }
     return queue->array[queue->front];
 }
 
@@ -73,11 +76,9 @@ int main(){
     enqueue(queue, 10);
     enqueue(queue, 345);
     enqueue(queue, 675);
-    enqueue(queue, 3435);
-
+    printf("\nQueue size: %d\n", queue->size);
     printf("%d front of Queue", getFront(queue));
     dequeue(queue);
-    printf("\n%d front of Queue", getFront(queue));
     printf("\n%d rear of Queue", getRear(queue));
 
     return 0;
