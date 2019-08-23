@@ -38,7 +38,6 @@ void enqueue(struct Queue* queue, int item) {
     queue->rear = (queue->rear+1)%queue->capacity;
     queue->array[queue->rear] = item;
     queue->size++;
-  //  printf("\nEnqueued %d", item);
 }
 
 //Function to remove item from queue
@@ -51,7 +50,6 @@ void dequeue(struct Queue* queue) {
     // Circular indexing technique , after last index queue->front will be point to Null Index i.e index before 0th Index(empty queue)
     queue->front = (queue->front+1)%queue->capacity;
     queue->size--;
-  //  printf("\nDequeued: %d", item);
 }
 
 //Function to get front item of queue
