@@ -35,20 +35,22 @@ int isEmpty(struct Queue* queue) {
 void enqueue(struct Queue* queue, int item) {
     if(isFull(queue))
         return;
-    //Circular Indexing Technique
+    // Circular Indexing Technique
+    // After rear becomes last index(epmty Queue) it will point to first Index of Arrsy
     queue->rear = (queue->rear+1)%queue->capacity;
     queue->array[queue->rear] = item;
     queue->size++;
 }
 
-//Function to remove item from queue
-//It removes item from queue
+// Function to remove item from queue
+// It removes item from queue
 void dequeue(struct Queue* queue) {
     if(isEmpty(queue))
         return;
 
     int item = queue->array[queue->front];
-    // Circular indexing technique , after last index queue->front will be point to Null Index i.e index before 0th Index(empty queue)
+    // Circular indexing technique ,
+    // After last index queue->front will be point to Null Index i.e index before 0th Index(empty queue)
     queue->front = (queue->front+1)%queue->capacity;
     queue->size--;
 }
