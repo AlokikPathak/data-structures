@@ -94,14 +94,14 @@ void buildMaxHeap(int *arr, int n)
 }
 
 /**
- * Name: heapSort()
+ * Name: heapSortMaxHeap()
  * Purpose: Build Max Heap out of given array visualized as heap, and then sorting the Max Heap
  * @param: int* arr, pointer to array
  * @param: int n, size of array
  * @return: void
  * @complexity: O(NlogN), since BuilMaxHeap() takes O(N) and traversing through Binary Tree takes logarithimic time
 */
-void heapSort(int *arr, int n)
+void heapSortMaxHeap(int *arr, int n)
 {
 	int i;
 	// Making Max Heap using the heap
@@ -110,6 +110,9 @@ void heapSort(int *arr, int n)
 	printArray(arr, n);
 
 	// Performing Heap Sort on Max heap
+	// heap sort using man-heap
+	// exchange last node with root, man-heapify the changed heap
+	// doing this for all nodes from last to first( sorting using bottom-to-top(leaves to root) way in heap)
 	for (i = n - 1; i >= 0; i--)
 	{
 		// Move current root to end(i.e i, everytime getting reduced by 1)
@@ -134,7 +137,7 @@ int main()
 	scanf("%d", &n);
 	int arr[n];
 	takeArrayInput(arr, n);
-	heapSort(arr, n);
+	heapSortMaxHeap(arr, n);
 	printf("Sorted array: \n");
 	printArray(arr, n);
 
