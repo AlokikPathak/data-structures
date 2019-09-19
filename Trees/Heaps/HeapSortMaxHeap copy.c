@@ -81,7 +81,7 @@ void maxHeapify(int *arr, int size, int nodeIndex)
  * @param: int arr[]
  * @param: int n, size of array
  * @return: void
- * @complexity : O(N) (max_heapify complexity: O(logN) and total n/2 steps so N constant)
+ * @complexity : O(N) (max_heapify complexity: O(logN) and total n/2 steps so O(N) is linear time)
  * If array is visualized as nearly Complete Binary Tree, all the elements after n/2 to n are leaves
  * In heaps, the leaves are automatically a Max Heap, since they don't have child
  * 

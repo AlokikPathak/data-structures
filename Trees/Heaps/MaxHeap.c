@@ -108,8 +108,8 @@ int main()
 	scanf("%d", &n);
 	int arr[n];
 	takeArrayInput(arr, n);
-	heapSort(arr, n);
-	printf("Sorted array: \n");
+	buildMaxHeap(arr, n);
+	printf("Max Heap: \n");
 	printArray(arr, n);
 
 	return 0;
