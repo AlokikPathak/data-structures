@@ -3,6 +3,7 @@
 #include<limits.h>
 
 /**
+ * Date modified: 28/12/2019
  * Stack(Last-In-First-Out)
  * @member int front: stores index of 1st element of Stack
  * @member int rear: stores index of last element of Stack
