@@ -2,7 +2,7 @@
 Implementation of Data Structures in C.
 
 
-## Contents
+### Contents
 * Graphs
   * DirectedWeightedGraphAdjListRepresentation.c
 * LinkedLists
