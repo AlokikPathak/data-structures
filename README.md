@@ -1,4 +1,4 @@
-# Data Structures
+# Data Structures/C
 Implementation of Data Structures in C.
 
 
